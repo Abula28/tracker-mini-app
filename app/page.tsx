@@ -4,10 +4,8 @@ import Image from "next/image";
 export default function Home() {
   const issues = parseIssues();
 
-  console.log(issues)
-
   return (
-    <div className="flex flex-col gap-10">
+    <div className="flex flex-col gap-10 bg-ui-light-background dark:bg-ui-dark-background">
       {issues.map((issue) => (
         <div key={issue.id}>
           <h1>{issue.title}</h1>
