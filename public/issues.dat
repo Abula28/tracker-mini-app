@@ -1,0 +1,6 @@
+1|Login page error|open|2025-07-01T10:12:00Z|Users occasionally see a 500 when logging in.
+2|Improve dashboard loading|in_progress||Lazy load heavy widgets to improve TTI.
+3|Button contrast|open|2025-07-20T16:30:00Z|Primary buttons fail WCAG AA on dark mode.
+3|Button contrast duplicate|open|2025-07-21T09:00:00Z|Duplicate entry that should be ignored (same id).
+4|Billing API mismatch|closed|2025-07-10T08:45:00Z|Mismatch between UI label and server field name.
+5|Extremely long title that should gracefully wrap without breaking layout or causing overflow in any breakpoint|open|2025-07-18T12:00:00Z|Check wrapping.
