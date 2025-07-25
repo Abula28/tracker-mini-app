@@ -17,7 +17,7 @@ export default function RootLayout({
       <body>
         <ThemeProvider>
           <Header />
-          {children}
+          <div className="max-w-7xl mx-auto lg:px-0 px-4">{children}</div>
         </ThemeProvider>
       </body>
     </html>

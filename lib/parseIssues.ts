@@ -1,14 +1,14 @@
-import { Issue } from "@/types";
+import { IssueT } from "@/types";
 import fs from "fs";
 import path from "path";
 
-export function parseIssues(): Issue[] {
+export function parseIssues(): IssueT[] {
   const filePath = path.join(process.cwd(), "public", "issues.dat");
   const rawData = fs.readFileSync(filePath, "utf-8");
   const lines = rawData.trim().split("\n");
 
   const seenIds = new Set<string>();
-  const issues: Issue[] = [];
+  const issues: IssueT[] = [];
 
   for (const line of lines) {
     const [id, title, status, updatedAt, description] = line.split("|");
@@ -22,7 +22,7 @@ export function parseIssues(): Issue[] {
     issues.push({
       id,
       title: title.trim(),
-      status: (status || "").trim() as Issue["status"],
+      status: (status || "").trim() as IssueT["status"],
       updatedAt: updatedAt?.trim() || null,
       description: description?.trim() || "",
     });
